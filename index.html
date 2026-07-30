@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Referências — Detecção de Duplicação de Imagens Científicas</title>
+<style>
+  :root {
+    --accent: #2A78D6;
+    --accent-dark: #184F95;
+    --ink: #0b0b0b;
+    --sec-ink: #52514e;
+    --muted: #898781;
+    --hairline: #e1e0d9;
+    --surface: #fcfcfb;
+    --page: #f9f9f7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--page);
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin: 0 0 0.4rem;
+    color: var(--ink);
+  }
+  .subtitle {
+    color: var(--sec-ink);
+    font-size: 1.05rem;
+    margin: 0 0 0.9rem;
+  }
+  .authors {
+    font-size: 0.95rem;
+    color: var(--sec-ink);
+  }
+  .authors strong { color: var(--ink); }
+  .meta-links {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  .meta-links a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    margin-right: 1.2rem;
+  }
+  .meta-links a:hover { text-decoration: underline; }
+  h2 {
+    font-size: 1.15rem;
+    color: var(--ink);
+    border-left: 4px solid var(--accent);
+    padding-left: 0.6rem;
+    margin: 2rem 0 1rem;
+  }
+  ol.refs {
+    list-style: none;
+    counter-reset: ref-counter;
+    padding: 0;
+    margin: 0;
+  }
+  ol.refs li {
+    counter-increment: ref-counter;
+    position: relative;
+    padding: 0.9rem 0 0.9rem 2.6rem;
+    border-bottom: 1px solid var(--hairline);
+  }
+  ol.refs li:last-child { border-bottom: none; }
+  ol.refs li::before {
+    content: "[" counter(ref-counter) "]";
+    position: absolute;
+    left: 0;
+    top: 0.9rem;
+    color: var(--accent-dark);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .ref-title {
+    font-style: italic;
+    color: var(--ink);
+  }
+  .ref-venue {
+    color: var(--sec-ink);
+  }
+  .ref-link {
+    display: inline-block;
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+    color: var(--accent-dark);
+    text-decoration: none;
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+  }
+  .ref-link:hover { background: var(--accent); color: white; border-color: var(--accent); }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--hairline);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--accent-dark); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Detecção Automática de Duplicação de Imagens em Publicações Científicas</h1>
+    <p class="subtitle">via Correspondência Geométrica de Características Locais e Modelos Multimodais</p>
+    <p class="authors">
+      <strong>Guilherme de Medeiros</strong> ·
+      Orientador: João Phillipe Cardenuto ·
+      Coorientador: Anderson Rocha<br>
+      Instituto de Computação — Universidade Estadual de Campinas (Unicamp) — RECOD.ai Lab
+    </p>
+    <div class="meta-links">
+      <a href="https://github.com/researchintegrity/elis">Plataforma ELIS →</a>
+      <a href="mailto:guilherme.ggcm20@gmail.com">Contato →</a>
+    </div>
+  </header>
+
+  <h2>Referências Bibliográficas</h2>
+  <ol class="refs">
+    <li>
+      E. Sabir, S. Nandi, W. AbdAlmageed, P. Natarajan.
+      <span class="ref-title">BioFors: A Large Biomedical Image Forensics Dataset.</span>
+      <span class="ref-venue">ICCV, 2021.</span><br>
+      <a class="ref-link" href="https://arxiv.org/abs/2108.12961" target="_blank" rel="noopener">arXiv:2108.12961</a>
+    </li>
+    <li>
+      P. Lindenberger, P.-E. Sarlin, M. Pollefeys.
+      <span class="ref-title">LightGlue: Local Feature Matching at Light Speed.</span>
+      <span class="ref-venue">ICCV, 2023.</span><br>
+      <a class="ref-link" href="https://arxiv.org/abs/2306.13643" target="_blank" rel="noopener">arXiv:2306.13643</a>
+    </li>
+    <li>
+      P.-E. Sarlin, D. DeTone, T. Malisiewicz, A. Rabinovich.
+      <span class="ref-title">SuperGlue: Learning Feature Matching with Graph Neural Networks.</span>
+      <span class="ref-venue">CVPR, 2020.</span><br>
+      <a class="ref-link" href="https://arxiv.org/abs/1911.11763" target="_blank" rel="noopener">arXiv:1911.11763</a>
+    </li>
+    <li>
+      J. Edstedt, Q. Sun, G. Bökman, M. Wadenbäck, M. Felsberg.
+      <span class="ref-title">RoMa: Robust Dense Feature Matching.</span>
+      <span class="ref-venue">CVPR, 2024.</span><br>
+      <a class="ref-link" href="https://scholar.google.com/scholar?q=RoMa%3A+Robust+Dense+Feature+Matching+Edstedt" target="_blank" rel="noopener">Google Scholar →</a>
+    </li>
+    <li>
+      D. DeTone, T. Malisiewicz, A. Rabinovich.
+      <span class="ref-title">SuperPoint: Self-Supervised Interest Point Detection and Description.</span>
+      <span class="ref-venue">CVPR Workshops, 2018.</span><br>
+      <a class="ref-link" href="https://scholar.google.com/scholar?q=SuperPoint%3A+Self-Supervised+Interest+Point+Detection+and+Description" target="_blank" rel="noopener">Google Scholar →</a>
+    </li>
+    <li>
+      D. Barath, J. Noskova, M. Ivashechkin, J. Matas.
+      <span class="ref-title">MAGSAC++, a Fast, Reliable and Accurate Robust Estimator.</span>
+      <span class="ref-venue">CVPR, 2020.</span><br>
+      <a class="ref-link" href="https://scholar.google.com/scholar?q=MAGSAC%2B%2B%2C+a+Fast%2C+Reliable+and+Accurate+Robust+Estimator" target="_blank" rel="noopener">Google Scholar →</a>
+    </li>
+    <li>
+      S. Xu, S. Chen, R. Xu, C. Wang, P. Lu, L. Guo.
+      <span class="ref-title">Local Feature Matching Using Deep Learning: A Survey.</span>
+      <span class="ref-venue">arXiv, 2024.</span><br>
+      <a class="ref-link" href="https://arxiv.org/abs/2401.17592" target="_blank" rel="noopener">arXiv:2401.17592</a>
+    </li>
+    <li>
+      F. Guillaro, D. Cozzolino, A. Sud, N. Dufour, L. Verdoliva.
+      <span class="ref-title">TruFor: Leveraging All-Round Clues for Trustworthy Image Forgery Detection and Localization.</span>
+      <span class="ref-venue">CVPR, 2023.</span><br>
+      <a class="ref-link" href="https://scholar.google.com/scholar?q=TruFor%3A+Leveraging+All-Round+Clues+for+Trustworthy+Image+Forgery+Detection+and+Localization" target="_blank" rel="noopener">Google Scholar →</a>
+    </li>
+    <li>
+      J. P. Cardenuto, D. Moreira, A. Rocha.
+      <span class="ref-title">Unveiling Scientific Articles from Paper Mills with Provenance Analysis.</span>
+      <span class="ref-venue">PLOS ONE, 19(10): e0312666, 2024.</span><br>
+      <a class="ref-link" href="https://doi.org/10.1371/journal.pone.0312666" target="_blank" rel="noopener">DOI: 10.1371/journal.pone.0312666</a>
+    </li>
+  </ol>
+
+  <footer>
+    Página de apoio ao pôster apresentado na 8ª SEMAP (Semana de Matemática Aplicada — IMECC/Unicamp).
+    Código-fonte em
+    <a href="https://github.com/medeirosdev/poster-ic-refencias-2026-ic">github.com/medeirosdev/poster-ic-refencias-2026-ic</a>.
+  </footer>
+</main>
+</body>
+</html>
